@@ -4,7 +4,7 @@
   "description": "dWebFS daemon",
   "main": "index.js",
   "bin": {
-    "hyperdrive": "./bin/run/run"
+    "dwebfs": "./bin/run/run"
   },
   "scripts": {
     "test": "standard && NODE_ENV=test tape test/*.js"
@@ -18,19 +18,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrewosh/hyperdrive-daemon.git"
+    "url": "git+https://github.com/andrewosh/dwebfs-daemon.git"
   },
   "keywords": [
-    "hyperdrive",
+    "dwebfs",
     "fuse",
     "daemon"
   ],
   "author": "Andrew Osheorff <andrewosh@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andrewosh/hyperdrive-daemon/issues"
+    "url": "https://github.com/andrewosh/dwebfs-daemon/issues"
   },
-  "homepage": "https://github.com/andrewosh/hyperdrive-daemon#readme",
+  "homepage": "https://github.com/andrewosh/dwebfs-daemon#readme",
   "dependencies": {
     "@grpc/grpc-js": "^0.5.1",
     "@oclif/command": "^1.5.19",
@@ -88,11 +88,11 @@
   },
   "oclif": {
     "commands": "./bin/commands",
-    "bin": "hyperdrive",
+    "bin": "dwebfs",
     "plugins": [
       "@oclif/plugin-help",
       "@oclif/plugin-autocomplete",
-      "hyperdrive-daemon-client"
+      "dwebfs-daemon-client"
     ]
   }
 }

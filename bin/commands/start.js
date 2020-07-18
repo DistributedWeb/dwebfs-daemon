@@ -1,7 +1,7 @@
 const ora = require('ora')
 const { Command, flags } = require('@oclif/command')
 
-const constants = require('hyperdrive-daemon-client/lib/constants')
+const constants = require('dwebfs-daemon-client/lib/constants')
 const { start } = require('../../manager')
 
 class StartCommand extends Command {
