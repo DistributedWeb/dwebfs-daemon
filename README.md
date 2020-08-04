@@ -3,12 +3,12 @@
 
 The Hyperdrive daemon helps you create, share, and manage Hyperdrives through a persistent process running on your computer, without having to deal with storage management or networking configuration.
 
-It provides both a gRPC API (see [`dwebfs-daemon-client`](https://github.com/andrewosh/dwebfs-daemon-client)) for interacting with remote drives, and an optional FUSE interface for mounting drives as directories in your local filesystem.
+It provides both a gRPC API (see [`dwebfs-daemon-client`](https://github.com/distributedweb/dwebfs-daemon-client)) for interacting with remote drives, and an optional FUSE interface for mounting drives as directories in your local filesystem.
 
 #### Features
 * __Hyperswarm Networking__: Hyperdrives are announced and discovered using the [Hyperswarm DHT](https://github.com/dwswarm/dwswarm).
 * __Easy Storage__: All your Hyperdrives are stored in a single spot, the `~/.dwebfs/storage` directory.
-* __gRPC API__: The daemon exposes an API for managing remote Hyperdrives over gRPC. We currently have a [NodeJS client](https://github.com/andrewosh/dwebfs-daemon-client).
+* __gRPC API__: The daemon exposes an API for managing remote Hyperdrives over gRPC. We currently have a [NodeJS client](https://github.com/distributedweb/dwebfs-daemon-client).
 * __FUSE support__: If you're using Linux or Mac, you can mount Hyperdrives as directories and work with them using standard filesystem syscalls.
 * __CLI Tools__: The `dwebfs` CLI supports a handful of commands for managing the daemon, creating/sharing drives, getting statistics, and augmenting the FUSE interface to support Hyperdrive-specific functions (like mounts).
 * __Persistence__: Networking configuration info is stored in a [Level](https://github.com/level/level) instance, so your drives will reconnect to the network automatically when the daemon's restarted.
@@ -60,7 +60,7 @@ The Hyperdrive daemon is running:
 ```
 
 ## API
-The daemon exposes a gRPC API for interacting with remote Hyperdrives. [`dwebfs-daemon-client`](https://github.com/andrewosh/dwebfs-daemon-client) is a Node client that you can use to interact with the API. If you'd like to write a client in another language, check out the schema definitions in [`dwebfs-schemas`](https://github.com/andrewosh/dwebfs-schemas)
+The daemon exposes a gRPC API for interacting with remote Hyperdrives. [`dwebfs-daemon-client`](https://github.com/distributedweb/dwebfs-daemon-client) is a Node client that you can use to interact with the API. If you'd like to write a client in another language, check out the schema definitions in [`dwebfs-schemas`](https://github.com/distributedweb/dwebfs-schemas)
 
 ## CLI
 
@@ -135,7 +135,7 @@ The setup command installs native, prebuilt FUSE bindings. We currently only pro
 ```
 ❯ dwebfs fuse-setup
 Configuring FUSE...
-[sudo] password for andrewosh:
+[sudo] password for distributedweb:
 Successfully configured FUSE!
 ```
 
