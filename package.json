@@ -71,7 +71,7 @@
   },
   "optionalDependencies": {
     "fuse-native": "^2.2.1",
-    "dwebfs-fuse": "^1.0.0"
+    "dweb-fuse": "^1.0.0"
   },
   "devDependencies": {
     "standard": "^12.0.1",

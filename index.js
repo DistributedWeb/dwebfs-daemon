@@ -38,7 +38,7 @@ const DATA_CACHE_SIZE = TOTAL_CACHE_SIZE * (1 - CACHE_RATIO)
 
 // This is set dynamically in refreshFuse.
 try {
-  var hyperfuse = require('dwebfs-fuse')
+  var hyperfuse = require('dweb-fuse')
 } catch (err) {}
 
 class HyperdriveDaemon extends EventEmitter {
@@ -195,7 +195,7 @@ class HyperdriveDaemon extends EventEmitter {
     }
     if (this.fuse && this.fuse.fuseConfigured) {
       this._versions.fuseNative = require('fuse-native/package.json').version
-      this._versions.hyperdriveFuse = require('dwebfs-fuse/package.json').version
+      this._versions.hyperdriveFuse = require('dweb-fuse/package.json').version
     }
   }
 
@@ -297,9 +297,9 @@ class HyperdriveDaemon extends EventEmitter {
       refreshFuse: async call => {
         await this.fuse.ready()
         if (this.fuse && this.fuse.fuseConfigured) {
-          hyperfuse = require('dwebfs-fuse')
+          hyperfuse = require('dweb-fuse')
           this._versions.fuseNative = require('fuse-native/package.json').version
-          this._versions.hyperdriveFuse = require('dwebfs-fuse/package.json').version
+          this._versions.hyperdriveFuse = require('dweb-fuse/package.json').version
         }
         return new rpc.main.messages.FuseRefreshResponse()
       }

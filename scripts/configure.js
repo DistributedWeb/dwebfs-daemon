@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const hyperfuse = require('dwebfs-fuse')
+const hyperfuse = require('dweb-fuse')
 
 hyperfuse.configure(err => {
   if (err) return process.exit(1)

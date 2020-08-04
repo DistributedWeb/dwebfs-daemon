@@ -30,7 +30,7 @@ class SetupCommand extends Command {
   }
   async run () {
     try {
-      var hyperfuse = require('dwebfs-fuse')
+      var hyperfuse = require('dweb-fuse')
     } catch (err) {}
 
     if (!hyperfuse) {
