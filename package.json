@@ -1,10 +1,10 @@
 {
-  "name": "hyperdrive-daemon",
-  "version": "1.14.5",
-  "description": "A FUSE-mountable distributed filesystem, built on Hyperdrive",
+  "name": "dwebfs-daemon",
+  "version": "1.0.0",
+  "description": "A FUSE-mountable distributed filesystem, built on DWebFs",
   "main": "index.js",
   "bin": {
-    "hyperdrive": "./bin/run/run"
+    "dwebfs": "./bin/run/run"
   },
   "scripts": {
     "test": "NODE_ENV=test tape test/*.js"
@@ -18,19 +18,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrewosh/hyperdrive-daemon.git"
+    "url": "git+https://github.com/distributedweb/dwebfs-daemon.git"
   },
   "keywords": [
-    "hyperdrive",
+    "dwebfs",
     "fuse",
     "daemon"
   ],
-  "author": "Andrew Osheorff <andrewosh@gmail.com>",
+  "author": "jared rice <jared@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andrewosh/hyperdrive-daemon/issues"
+    "url": "https://github.com/distributedweb/dwebfs-daemon/issues"
   },
-  "homepage": "https://github.com/andrewosh/hyperdrive-daemon#readme",
+  "homepage": "https://github.com/distributedweb/dwebfs-daemon#readme",
   "dependencies": {
     "@grpc/grpc-js": "^0.5.1",
     "@oclif/command": "^1.5.19",
@@ -40,20 +40,20 @@
     "@oclif/plugin-help": "^2.2.3",
     "buffer-json-encoding": "^1.0.2",
     "call-me-maybe": "^1.0.1",
-    "corestore": "^5.0.0",
-    "corestore-swarm-networking": "^5.0.0",
-    "dat-encoding": "^5.0.1",
+    "dwebx": "git://github.com/DistributedWeb/dwebx.git#2009bb01b0919b5d8b1f8ca4ede38aa5e8078123",
+    "dwebx-swarm-networking": "git://github.com/DistributedWeb/dwebx-swarm-networking.git#e0b8e51bfd8b812988a85a3b60b9acc0d4a134b4",
+    "dweb-encoding": "git://github.com/DistributedWeb/dweb-encoding.git#f93b3f30c61044160cb26b79b13e72f5e36b534a",
     "end-of-stream": "^1.4.4",
     "fs-extra": "^7.0.1",
     "globby": "^11.0.0",
     "google-protobuf": "^3.8.0",
-    "hypercore-cache": "^1.0.2",
-    "hypercore-crypto": "^2.0.2",
-    "hypercore-default-storage": "^1.0.0",
-    "hypercore-protocol": "^8.0.0",
-    "hyperdrive": "^10.8.10",
-    "hyperdrive-daemon-client": "^1.14.3",
-    "hyperdrive-schemas": "^1.9.0",
+    "ddatabase-cache": "git://github.com/DistributedWeb/ddatabase-cache.git#5b2c6c68c2c5ea6a25af81cc268a423ff6809dc1",
+    "ddatabase-crypto": "git://github.com/DistributedWeb/ddatabase-crypto.git#dc1ebdbd7b7973b42d6acd88c79c8868ba5778f3",
+    "ddatabase-default-storage": "git://github.com/DistributedWeb/ddatabase-default-storage.git#d6aa494b39fb541434b710d05c12991b6a772f27",
+    "ddatabase-protocol": "git://github.com/DistributedWeb/ddatabase-protocol.git#bf7d74a532d86b138112b90b3e71f3f645cd0fdb",
+    "dwebfs": "git://github.com/DistributedWeb/dwebfs.git#7f228dd71e2edb3c15091e46dc89b85caf298755",
+    "dwebfs-daemon-client": "git://github.com/DistributedWeb/dwebfs-daemon-client.git#5b261e99dd7ad25a8653d133e2341e75edc85ce9",
+    "dwebfs-schemas": "git://github.com/DistributedWeb/dwebfs-schemas.git#4363a431cc5e72c247f678c6e54cd55f77198aac",
     "level": "^6.0.0",
     "level-mem": "^5.0.1",
     "minimist": "^1.2.5",
@@ -74,7 +74,7 @@
   },
   "optionalDependencies": {
     "fuse-native": "^2.2.1",
-    "hyperdrive-fuse": "^1.2.12"
+    "dwebfs-fuse": "git://github.com/DistributedWeb/dwebfs-fuse.git#6bca477549bf58fbb48438aab82c4bb3bdea6913"
   },
   "devDependencies": {
     "standard": "^12.0.1",
@@ -91,11 +91,11 @@
   },
   "oclif": {
     "commands": "./bin/commands",
-    "bin": "hyperdrive",
+    "bin": "dwebfs",
     "plugins": [
       "@oclif/plugin-help",
       "@oclif/plugin-autocomplete",
-      "hyperdrive-daemon-client"
+      "dwebfs-daemon-client"
     ]
   }
 }
